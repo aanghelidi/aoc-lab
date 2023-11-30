@@ -1,0 +1,13 @@
+#!/usr/bin/awk -f
+
+function compute(n) {
+  return int(n / 3) - 2
+}
+
+function compute2(n) {
+  fuel = compute(n)
+  return fuel <= 0 ?  0 : fuel + compute2(fuel)
+}
+
+    { sum += compute2($1) }
+END { print sum }

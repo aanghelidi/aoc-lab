@@ -1,0 +1,8 @@
+#!/usr/bin/awk -f
+
+function compute(n) {
+  return int(n / 3) - 2
+}
+
+    { sum += compute($1) } 
+END { print sum }
