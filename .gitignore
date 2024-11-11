@@ -174,3 +174,7 @@ dist
 # Finder (MacOS) folder config
 .DS_Store
 
+# Remove advent of code samples
+*.txt
+**/*.txt
+
